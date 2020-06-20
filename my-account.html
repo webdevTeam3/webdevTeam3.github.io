@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="myaccount.css" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="jquery.slicknav.min.js"></script>
-    <script type="text/javascript">
+    <script>
       $(document).ready(function () {
         $("#nav_menu").slicknav({ prependTo: "#mobile_menu" });
       });
@@ -42,23 +42,23 @@
     </nav>
     <main>
       <section>
-        <h1>My Account</h1>
-        <div #myAccount-container>
-          <h2>Settings</h2>
-          <section>
-            <h3>email : elonmusk@example.com</h3>
-            <h3>Password : ******</h3>
-          </section>
-          <h2>Change Password</h2>
-          <section>
-            <h3>old password</h3>
+        <h2>My Account</h2>
+        <div id="myAccount-container">
+          <h3>Settings</h3><br>
+          <div>
+            <p>email : elonmusk@example.com</p>
+            <p>Password : ******</p>
+          </div><br>
+          <h3>Change Password</h3><br>
+          <div>
+            <p>old password</p>
             <input type="password" />
-            <h3>new password</h3>
+            <p>new password</p>
             <input type="password" />
-            <h3>confirm password</h3>
+            <p>confirm password</p>
             <input type="password" />
             <button>Change password</button>
-          </section>
+          </div>
         </div>
       </section>
       <aside></aside>
