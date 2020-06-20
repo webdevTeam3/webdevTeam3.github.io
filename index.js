@@ -164,8 +164,6 @@ function calculateProgress(startDate, refillTime, duration) {
     var daysRefillToEnd = (end - refill) / (1000 * 60 * 60 * 24);
     var daysTodayToEnd = (end - today) / (1000 * 60 * 60 * 24);
     
-    console.log(daysRefillToEnd / total * 100);
-    
     var divHTML = '<div id="progress-bar"><div class="progress completed" style="width:' + (daysStartToToday / total * 100) + '%">' + Math.round(daysStartToToday) + '</div>'
     
     if (today < refill) {
