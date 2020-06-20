@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 	CIS 215 Final Project Assignment. Team 3: Travis, Zion, George
+        Page: 3, aboutus.html
+        ************************************************************ -->
+    <head>
+        <meta charset="UTF-8">
+		<link rel="shortcut icon" href="logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Medication Management Application</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="slicknav.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="jquery.slicknav.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+               $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="logo.jpg" alt="clock with pill capsules as hands"></a>
+            <h1>Medication Management Application</h1>
+        </header>
+        <nav id="mobile_menu"></nav>
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patients.html">Patients</a></li>
+                <li><a href="professionals.html">Professionals</a></li>
+                <li><a href="aboutus.html" class="current">About Us</a></li>
+                <li><a href="my-account.html">My Account</a>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="logout.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+				<h3>Our Mission</h3>
+				<p>Lorem ipsum dolor sit amet, oporteat apeirian reformidans cu cum, nisl labore vim ne, alterum sadipscing no pro. Illud liber dissentias ut cum. Amet alterum ut sea. Agam dolore eu ius, ad legimus dissentiunt pro, nec ne paulo discere usu.</p>
+				
+				<h3>Our Services</h3>
+				<p>Lorem ipsum dolor sit amet, duo an semper saperet voluptaria, ne dicat facilisi indoctum duo. Ut nusquam eligendi dissentiet mel, pro altera melius ut, nec an reque labitur. An soluta animal oporteat ius, discere quaerendum.</p>
+				<br>
+				<h3>Contact Us</h3>
+				
+				<ul>
+					<li>Tel: +1-913-938-7005</li>
+					<li>Fax: +1-913-938-7015</li>
+					<li>Email: info@medminder.com</li>
+				</ul>
+				<br>
+					<p><b>We can also address your specific concern</b></p>
+					<input type="text" placeholder="Your first name" id="firstName" /> 
+					<input type="text" placeholder="Your last name" id="lastName" /><br>
+					<input type="email" placeholder="Enter your email" id="email" /><br>
+					
+					<span>What is your question?</span> <br>
+					<textarea id="question" rows="3" cols="50"></textarea> <br>
+					<button onclick="sendContact();">Submit</button>
+				
+            </section>
+            <aside>
+				 <h2 id="Team"> Our Team..</h2>
+				 <div class='team_images'>
+					 <h3>Travis</h3>
+					 <img src="Travis.jpg" style="max-height: 30%; max-width: 30%" alt="Travis - Web Developer photo">
+					 <h3>Zion</h3>
+					 <img src="Zion.jpg"  style="max-height: 30%; max-width: 30%" alt="Zion - Web Designer">
+					 <h3>George</h3>
+					 <img src="George.jpg" style="max-height: 30%; max-width: 30%"  alt="George - Web QA, Tester">
+				 </div>
+				 <!-- <ul id = "image_list"> -->
+					<!-- <li><a href = "Travis.jpg" title = "Travis"><img src = "Travis.jpg" alt = ""></a></li> -->
+					<!-- <li><a href = "Zion.jpg" title = "Zion"><img src = "Zion.jpg" alt = ""></a></li> -->
+					<!-- <li><a href = "George.jpg" title = "George"><img src = "George.jpg" alt = ""></a></li> -->
+				<!-- </ul> -->
+				<!-- <h2 id = "caption"></h2> -->
+				<!-- <p><img id = "image" src = "Travis.jpg" alt = ""></p>  -->
+			</aside>
+		</main>
+		<footer>
+            <p>
+                <script>
+                    var today = new Date();
+                    document.write("&copy;&nbsp;");
+                    document.write(today.getFullYear());
+                    document.write(", Medication Management Application")
+                </script>
+            </p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CIS 215 Final Project Assignment. Team 3: Travis, Zion, George -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="logo.png">
+        <title>Medication Management Application</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="slicknav.css">
+        <script src="index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="jquery.slicknav.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+               $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
+        </script>
+    </head>
+    <body onload="bodyLoaded()">
+        <header>
+            <img src="logo.jpg" alt="clock with pill capsules as hands">
+            <h1>Medication Management Application</h1>
+        </header>
+        <nav id="mobile_menu"></nav>
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="patients.html">Patients</a></li>
+                <li><a href="professionals.html">Professionals</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="my-account.html">My Account</a>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="logout.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>My Medications</h2>
+                <div id="my-medications"></div>
+            </section>
+            <aside>
+                <h2>Add New Medication</h2>
+                <form action="" name="add-new-medication" id="add-new-medication">
+                    <fieldset>
+                        <legend>Medication Information</legend>
+                        <p>Please enter a National Drug Code (NDC) <em>or</em> drug information:</p><br>
+                        <input type="radio" name="entry-type" id="entry-type-1" value="national-drug-code" checked>
+                        <label for="entry-type-1">National Drug Code (NDC)</label><br>
+                        <label for="ndc" class="text-number-label">NDC</label>
+                        <input type="text" id="ndc" placeholder="99999-9999-99" pattern="\d{5}[\-]\d{4}[\-]\d{2}" title="Must be 99999-9999-99 format" required><br>
+                        <p id="invalid-ndc">NDC is invalid</p>
+                        <input type="radio" name="entry-type" id="entry-type-2" value="drug-information">
+                        <label for="entry-type-2">Drug Information</label><br>
+                        <label for="drug-name" class="text-number-label">Drug Name</label>
+                        <input type="text" id="drug-name" list="drug-names" required disabled>
+                        <datalist id="drug-names" disabled>
+                            <option value="Amoxicillin" label=""></option>
+                            <option value="Cetirizine" label=""></option>
+                            <option value="Insulin" label=""></option>
+                            <option value="Lisinopril" label=""></option>
+                            <option value="Naproxen" label=""></option>
+                        </datalist><br>
+                        <label for="strength" class="text-number-label">Strength</label>
+                        <input type="number" id="strength" min="1" max="1000" required disabled>
+                        <select name="units" id="units" required disabled>
+                            <option selected disabled></option>
+                            <option value="mcg">mcg</option>
+                            <option value="mg">mg</option>
+                            <option value="mL">mL</option>
+                            <option value="units">units</option>
+                        </select><br>
+                        <label for="dosage-form" class="text-number-label">Dosage Form</label>
+                        <select name="dosage-form" id="dosage-form" required disabled>
+                            <option selected disabled></option>
+                            <option value="Capsule">Capsule</option>
+                            <option value="Puff">Puff</option>
+                            <option value="Tablet">Tablet</option>
+                            <option value="Vial">Vial</option>
+                        </select><br>
+                        <label for="route" class="text-number-label">Route</label>
+                        <select name="route" id="route" required disabled>
+                            <option selected disabled></option>
+                            <option value="By Mouth">By Mouth</option>
+                            <option value="Inhale">Inhale</option>
+                            <option value="Inject">Inject</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Dosage</legend>
+                        <label for="dose" class="text-number-label">Dose</label>
+                        <input type="number" id="dose" min="1" max="5" required><br>
+                        <label for="frequency" class="text-number-label">Frequency (per day)</label>
+                        <input type="number" id="frequency" min="1" max="3" required><br>
+                        <label for="duration" class="text-number-label">Duration (days)</label>
+                        <input type="number" id="duration" min="1" max="365" required><br>
+                        <label for="refills" class="text-number-label">Refills</label>
+                        <input type="number" id="refills" min="0" max="99" required>
+                    </fieldset>
+                    <fieldset>
+                       <legend>Preferences</legend>
+                        <label for="start-date" class="text-number-label">Start Date</label>
+                        <input type="date" id="start-date" required><br>
+                        <input type="checkbox" name="default-reminders" id="default-reminders" checked>
+                        <label for="default-reminders">Use default reminders</label>
+                        <div id="custom-reminders">
+                            <div id="custom-reminder-1">
+                                <label for="reminder1">Reminder 1</label>
+                                <input type="time" name="reminder1" id="reminder1" value="08:00">
+                            </div>
+                            <div id="custom-reminder-2">
+                                <label for="reminder2">Reminder 2</label>
+                                <input type="time" name="reminder2" id="reminder2" value="14:00">
+                            </div>
+                            <div id="custom-reminder-3">
+                                <label for="reminder3">Reminder 3</label>
+                                <input type="time" name="reminder3" id="reminder3" value="20:00">
+                            </div>
+                            <div id="custom-refill-reminder">
+                                <label for="refill-reminder">Refill Reminder (days)</label>
+                                <input type="number" name="refill-reminder" id="refill-reminder" min="0" max="30" value="7">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="buttons">
+                        <legend>Submit</legend>
+                        <label>&nbsp;</label>
+                        <input type="button" id="submit" value="Submit">
+                        <input type="reset" id="reset" value="Reset Fields">
+				    </fieldset>
+                </form>
+            </aside>
+        </main>
+        <footer>
+            <p>
+                <script>
+                    var today = new Date();
+                    document.write("&copy;&nbsp;");
+                    document.write(today.getFullYear());
+                    document.write("&nbsp;Medication Management Application")
+                </script>
+            </p>
+        </footer>
+    </body>
+</html>

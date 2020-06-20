@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CIS 215 Final Project Assignment. Team 3: Travis, Zion, George -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="logo.png">
+    <title>Medication Management Application</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="slicknav.css" />
+    <link rel="stylesheet" href="patients.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="jquery.slicknav.min.js"></script>
+    <script src="patient.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#nav_menu").slicknav({ prependTo: "#mobile_menu" });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="logo.jpg" alt="clock with pill capsules as hands"></a>
+      <h1>Medication Management Application</h1>
+    </header>
+    <nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="patients.html" class="current">Patients</a></li>
+        <li><a href="professionals.html">Professionals</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li>
+          <a href="my-account.html">My Account</a>
+          <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="logout.html">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h1>Patients</h1>
+        <div id="patient-container">
+          <div id="search-container">
+            <label for="patient-search">Search patients :</label>
+            <input type="search" id="patient-search" />
+            <button onclick="searchPatient()">Search</button>
+          </div>
+          <table id="patient-table">
+            <tr id="patientsearchheader">
+              <th id="table-name-heading">Name</th>
+              <th id="table-medicine-heading">Medicine</th>
+            </tr>
+            <tr>
+              <td>Karen</td>
+              <td>medicine 1</td>
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>medicine 1</td>
+            </tr>
+            <tr>
+              <td>john</td>
+              <td>medicine 1</td>
+            </tr>
+            <tr>
+              <td>octavian</td>
+              <td>medicine 1</td>
+            </tr>
+            <tr>
+              <td>brittney</td>
+              <td>medicine 1</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <aside></aside>
+    </main>
+    <footer>
+      <p>
+        <script>
+          var today = new Date();
+          document.write("&copy;&nbsp;");
+          document.write(today.getFullYear());
+          document.write(", Medication Management Application");
+        </script>
+      </p>
+    </footer>
+  </body>
+</html>

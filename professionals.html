@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CIS 215 Final Project Assignment. Team 3: Travis, Zion, George -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="logo.png">
+    <title>Medication Management Application</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="slicknav.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#nav_menu").slicknav({ prependTo: "#mobile_menu" });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="logo.jpg" alt="clock with pill capsules as hands"></a>
+      <h1>Medication Management Application</h1>
+    </header>
+    <nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="patients.html">Patients</a></li>
+        <li><a href="professionals.html" class="current">Professionals</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li>
+          <a href="my-account.html">My Account</a>
+          <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="logout.html">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h1>Professionals</h1>
+        <div id="ProfesionalInfo">
+          <img src="" alt="Doctor 1" />
+          <h2>Doctor 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fugit
+            labore sapiente ullam in fuga odio voluptatibus hic laboriosam unde
+            necessitatibus maxime, debitis expedita beatae provident tempore ea
+            dolore delectus.
+          </p>
+        </div>
+        <div id="ProfesionalInfo">
+          <img src="" alt="Doctor 2" />
+          <h2>Doctor 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fugit
+            labore sapiente ullam in fuga odio voluptatibus hic laboriosam unde
+            necessitatibus maxime, debitis expedita beatae provident tempore ea
+            dolore delectus.
+          </p>
+        </div>
+        <div id="ProfesionalInfo">
+          <img src="" alt="Doctor 3" />
+          <h2>Doctor 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fugit
+            labore sapiente ullam in fuga odio voluptatibus hic laboriosam unde
+            necessitatibus maxime, debitis expedita beatae provident tempore ea
+            dolore delectus.
+          </p>
+        </div>
+      </section>
+      <aside></aside>
+    </main>
+    <footer>
+      <p>
+        <script>
+          var today = new Date();
+          document.write("&copy;&nbsp;");
+          document.write(today.getFullYear());
+          document.write(", Medication Management Application");
+        </script>
+      </p>
+    </footer>
+  </body>
+</html>

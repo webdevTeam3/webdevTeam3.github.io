@@ -1,0 +1,35 @@
+/* CIS 215 Final Project Assignment. Team 3: Travis, Zion, George */
+
+#patient-table {
+  border-color: collapse;
+  width: 90%;
+  margin: 0px 10px 0px 10px;
+  border: 1px solid black;
+  font-size: 18px;
+}
+
+#patient-search {
+  width: 25%;
+}
+
+#patient-table th,
+#patient-table td {
+  text-align: left;
+  padding: 10px;
+}
+
+#patient-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#patient-table th,
+#patient-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+#patient-container {
+  width: 75%;
+}
+#search-container {
+  margin: 20px;
+}

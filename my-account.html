@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CIS 215 Final Project Assignment. Team 3: Travis, Zion, George -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="logo.png">
+    <title>Medication Management Application</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="slicknav.css" />
+    <link rel="stylesheet" href="myaccount.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#nav_menu").slicknav({ prependTo: "#mobile_menu" });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="logo.jpg" alt="clock with pill capsules as hands"></a>
+      <h1>Medication Management Application</h1>
+    </header>
+    <nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="patients.html">Patients</a></li>
+        <li><a href="professionals.html">Professionals</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li>
+          <a href="my-account.html" class="current">My Account</a>
+          <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="logout.html">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h1>My Account</h1>
+        <div #myAccount-container>
+          <h2>Settings</h2>
+          <section>
+            <h3>email : elonmusk@example.com</h3>
+            <h3>Password : ******</h3>
+          </section>
+          <h2>Change Password</h2>
+          <section>
+            <h3>old password</h3>
+            <input type="password" />
+            <h3>new password</h3>
+            <input type="password" />
+            <h3>confirm password</h3>
+            <input type="password" />
+            <button>Change password</button>
+          </section>
+        </div>
+      </section>
+      <aside></aside>
+    </main>
+    <footer>
+      <p>
+        <script>
+          var today = new Date();
+          document.write("&copy;&nbsp;");
+          document.write(today.getFullYear());
+          document.write(", Medication Management Application");
+        </script>
+      </p>
+    </footer>
+  </body>
+</html>
