@@ -1,7 +1,7 @@
 /* CIS 215 Final Project Assignment. Team 3: Travis, Zion, George */
 
 #patient-table {
-  border-color: collapse;
+  border-collapse: collapse;
   width: 90%;
   margin: 0px 10px 0px 10px;
   border: 1px solid black;
